@@ -15,7 +15,7 @@ https://github.com/stalwartlabs/stalwart&#xD;
 &#xD;
 Execute docker logs stalwart to obtain the system administrator account and password:&#xD;
 $ docker logs stalwart</Overview>
-  <Category>Network: Other</Category>
+  <Category>Network:Other</Category>
   <WebUI>http://[IP]:[PORT:8008]</WebUI>
   <TemplateURL></TemplateURL>
   <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart-email-server/icon/stalwart.png</Icon>
