@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <Container version="2">
-  <Name>stalwart-email-server</Name>
+  <Name>stalwart</Name>
   <Repository>stalwartlabs/stalwart:latest</Repository>
   <Registry>https://github.com/stalwartlabs/stalwart</Registry>
   <Network>bridge</Network>
@@ -26,7 +26,7 @@ $ docker logs stalwart</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Stalwart data" Target="/opt/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart-email-server</Config>
+  <Config Name="Stalwart data" Target="/opt/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart</Config>
   <Config Name="Port 443" Target="443" Default="" Mode="tcp" Description="Port 443" Type="Port" Display="always" Required="true" Mask="false">44304</Config>
   <Config Name="Port 8080" Target="8080" Default="" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8008</Config>
   <Config Name="Port 25" Target="25" Default="" Mode="tcp" Description="Port 25" Type="Port" Display="always" Required="true" Mask="false">25</Config>
