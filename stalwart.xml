@@ -7,7 +7,7 @@
   <MyIP/>
   <Shell>sh</Shell>
   <Privileged>false</Privileged>
-  <Support/>
+  <Support>https://github.com/stalwartlabs/stalwart/discussions</Support>
   <Project>https://stalw.art/</Project>
   <Overview>Step into the future with Stalwart, the open-source powerhouse combining modern email and collaboration features with unmatched security, speed, and scalability.&#xD;
 https://stalw.art/&#xD;
