@@ -16,7 +16,7 @@ https://github.com/stalwartlabs/stalwart&#xD;
 Execute docker logs stalwart to obtain the system administrator account and password:&#xD;
 $ docker logs stalwart</Overview>
   <Category>Network: Other</Category>
-  <WebUI>http://[IP]:[PORT:8008]</WebUI>
+  <WebUI>http://[IP]:[PORT:8001]</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart-email-server.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart-email-server/icon/stalwart.png</Icon>
   <ExtraParams>-ti</ExtraParams>
@@ -27,8 +27,8 @@ $ docker logs stalwart</Overview>
   <DonateLink/>
   <Requires/>
   <Config Name="Stalwart data" Target="/opt/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart</Config>
-  <Config Name="Port 443" Target="443" Default="" Mode="tcp" Description="Port 443" Type="Port" Display="always" Required="true" Mask="false">44304</Config>
-  <Config Name="Port 8080" Target="8080" Default="" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8008</Config>
+  <Config Name="Port 443" Target="443" Default="" Mode="tcp" Description="Port 443" Type="Port" Display="always" Required="true" Mask="false">44301</Config>
+  <Config Name="Port 8080" Target="8080" Default="" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8001</Config>
   <Config Name="Port 25" Target="25" Default="" Mode="tcp" Description="Port 25" Type="Port" Display="always" Required="true" Mask="false">25</Config>
   <Config Name="Port 110" Target="110" Default="" Mode="tcp" Description="Port 110" Type="Port" Display="always" Required="true" Mask="false">110</Config>
   <Config Name="Port 143" Target="143" Default="" Mode="tcp" Description="Port 143" Type="Port" Display="always" Required="true" Mask="false">143</Config>
