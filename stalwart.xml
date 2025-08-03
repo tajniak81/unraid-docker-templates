@@ -37,5 +37,4 @@ $ docker logs stalwart</Overview>
   <Config Name="Port 993" Target="993" Default="" Mode="tcp" Description="Port 993" Type="Port" Display="always" Required="true" Mask="false">993</Config>
   <Config Name="Port 995" Target="995" Default="" Mode="tcp" Description="Port 995" Type="Port" Display="always" Required="true" Mask="false">995</Config>
   <Config Name="Port 4190" Target="4190" Default="" Mode="tcp" Description="Port 4190" Type="Port" Display="always" Required="true" Mask="false">4190</Config>
-  <TailscaleStateDir/>
 </Container>
