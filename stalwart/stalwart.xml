@@ -28,13 +28,13 @@ $ docker logs stalwart</Overview>
   <Requires/>
   <Config Name="Stalwart data" Target="/opt/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart</Config>
   <Config Name="Port 443" Target="443" Default="" Mode="tcp" Description="Port 443" Type="Port" Display="always" Required="true" Mask="false">44301</Config>
-  <Config Name="Port 8080" Target="8080" Default="" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
-  <Config Name="Port 25" Target="25" Default="" Mode="tcp" Description="Port 25" Type="Port" Display="always" Required="true" Mask="false">25</Config>
-  <Config Name="Port 110" Target="110" Default="" Mode="tcp" Description="Port 110" Type="Port" Display="always" Required="true" Mask="false">110</Config>
-  <Config Name="Port 143" Target="143" Default="" Mode="tcp" Description="Port 143" Type="Port" Display="always" Required="true" Mask="false">143</Config>
-  <Config Name="Port 465" Target="465" Default="" Mode="tcp" Description="Port 465" Type="Port" Display="always" Required="true" Mask="false">465</Config>
-  <Config Name="Port 587" Target="587" Default="" Mode="tcp" Description="Port 587" Type="Port" Display="always" Required="true" Mask="false">587</Config>
-  <Config Name="Port 993" Target="993" Default="" Mode="tcp" Description="Port 993" Type="Port" Display="always" Required="true" Mask="false">993</Config>
-  <Config Name="Port 995" Target="995" Default="" Mode="tcp" Description="Port 995" Type="Port" Display="always" Required="true" Mask="false">995</Config>
-  <Config Name="Port 4190" Target="4190" Default="" Mode="tcp" Description="Port 4190" Type="Port" Display="always" Required="true" Mask="false">4190</Config>
+  <Config Name="Port 8080" Target="8080" Default="8001" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8001</Config>
+  <Config Name="Port 25" Target="25" Default="25" Mode="tcp" Description="Port 25" Type="Port" Display="always" Required="true" Mask="false">25</Config>
+  <Config Name="Port 110" Target="110" Default="110" Mode="tcp" Description="Port 110" Type="Port" Display="always" Required="true" Mask="false">110</Config>
+  <Config Name="Port 143" Target="143" Default="143" Mode="tcp" Description="Port 143" Type="Port" Display="always" Required="true" Mask="false">143</Config>
+  <Config Name="Port 465" Target="465" Default="465" Mode="tcp" Description="Port 465" Type="Port" Display="always" Required="true" Mask="false">465</Config>
+  <Config Name="Port 587" Target="587" Default="587" Mode="tcp" Description="Port 587" Type="Port" Display="always" Required="true" Mask="false">587</Config>
+  <Config Name="Port 993" Target="993" Default="993" Mode="tcp" Description="Port 993" Type="Port" Display="always" Required="true" Mask="false">993</Config>
+  <Config Name="Port 995" Target="995" Default="995" Mode="tcp" Description="Port 995" Type="Port" Display="always" Required="true" Mask="false">995</Config>
+  <Config Name="Port 4190" Target="4190" Default="4190" Mode="tcp" Description="Port 4190" Type="Port" Display="always" Required="true" Mask="false">4190</Config>
 </Container>
