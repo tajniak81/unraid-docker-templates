@@ -17,8 +17,8 @@ Execute docker logs stalwart to obtain the system administrator account and pass
 $ docker logs stalwart</Overview>
   <Category>Network: Other</Category>
   <WebUI>http://[IP]:[PORT:8080]</WebUI>
-  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart-email-server.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart-email-server/icon/stalwart.png</Icon>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart/stalwart.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/stalwart/icon/stalwart.png</Icon>
   <ExtraParams>-ti</ExtraParams>
   <PostArgs/>
   <CPUset/>
