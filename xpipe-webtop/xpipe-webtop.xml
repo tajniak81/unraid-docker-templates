@@ -35,4 +35,6 @@ https://docs.xpipe.io/guide/webtop</Overview>
   <Config Name="Config Folder" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xpipe-webtop/config/</Config>
   <Config Name="HTTP" Target="3000" Default="3000" Mode="tcp" Description="HTTP" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
   <Config Name="HTTPS" Target="3001" Default="3001" Mode="tcp" Description="HTTPS" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+  <Config Name="Custom User" Target="CUSTOM_USER" Default="" Mode="" Description="HTTP Basic auth username, abc is default." Type="Variable" Display="always" Required="false" Mask="false"></Config>
+  <Config Name="Custom User Password" Target="PASSWORD" Default="" Mode="" Description="HTTP Basic auth password, abc is default. If unset there will be no auth" Type="Variable" Display="always" Required="false" Mask="true"></Config>
 </Container>
