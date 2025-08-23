@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>xpipe-webtop</Name>
+  <Repository>ghcr.io/xpipe-io/xpipe-webtop:latest</Repository>
+  <Registry>https://github.com/xpipe-io/xpipe-webtop</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://docs.xpipe.io/guide/webtop</Support>
+  <Project>https://github.com/xpipe-io/xpipe</Project>
+  <Overview>XPipe is a new type of shell connection hub and remote file manager that allows you to access your entire server infrastructure from your local machine. It works on top of your installed command-line programs and does not require any setup on your remote systems. So if you normally use CLI tools like ssh, docker, kubectl, etc. to connect to your servers, you can just use XPipe on top of that.&#xD;
+&#xD;
+XPipe fully integrates with your tools such as your favourite text/code editors, terminals, shells, command-line tools and more. The platform is designed to be extensible, allowing anyone to add easily support for more tools or to implement custom functionality through a modular extension system.&#xD;
+&#xD;
+XPipe is a desktop application first and foremost. It requires a full desktop environment with various installed applications such as terminals, editors, shells, CLI tools, and more to function. So there is not the possibility of creating a pure web-based interface for XPipe that comes with all features built into XPipe itself.&#xD;
+&#xD;
+Since it makes sense to access your XPipe environment from the web, there is the so-called XPipe Webtop docker container image available. XPipe Webtop is a web-based desktop environment that can be run in a container and accessed from a browser via KasmVNC. The desktop environment comes with XPipe and various terminals, editors, and more tools preinstalled and configured.&#xD;
+&#xD;
+https://xpipe.io/&#xD;
+https://github.com/xpipe-io/xpipe&#xD;
+https://github.com/xpipe-io/xpipe-webtop&#xD;
+https://docs.xpipe.io/guide/webtop</Overview>
+  <Category>Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:3000]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/xpipe-webtop/xpipe-webtop.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/xpipe-webtop/icon/xpipe.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1755965575</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Config Folder" Target="/config" Default="" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/xpipe-webtop/config/</Config>
+  <Config Name="HTTP" Target="3000" Default="3000" Mode="tcp" Description="HTTP" Type="Port" Display="always" Required="false" Mask="false">3000</Config>
+  <Config Name="HTTPS" Target="3001" Default="3001" Mode="tcp" Description="HTTPS" Type="Port" Display="always" Required="false" Mask="false">3001</Config>
+</Container>
