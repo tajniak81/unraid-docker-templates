@@ -19,7 +19,7 @@ sudo chown -R 1001:1001  /mnt/user/appdata/electerm-web/</Overview>
   <Category>Network:Other</Category>
   <WebUI>http://[IP]:[PORT:5577]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/electerm-web/electerm-web.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/electerm/icon/electerm.png</Icon>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/electerm/icon/electerm-web.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>

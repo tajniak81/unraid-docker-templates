@@ -24,7 +24,7 @@ https://docs.xpipe.io/guide/webtop</Overview>
   <Category>Network:Other</Category>
   <WebUI>http://[IP]:[PORT:3000]/</WebUI>
   <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/xpipe-webtop/xpipe-webtop.xml</TemplateURL>
-  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/xpipe-webtop/icon/xpipe.png</Icon>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/xpipe-webtop/icon/xpipe-webtop.png</Icon>
   <ExtraParams/>
   <PostArgs/>
   <CPUset/>
