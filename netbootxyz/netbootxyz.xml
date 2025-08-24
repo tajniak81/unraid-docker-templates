@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>netbootxyz</Name>
+  <Repository>netbootxyz/netbootxyz</Repository>
+  <Registry>https://github.com/netbootxyz/docker-netbootxyz</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>bash</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/netbootxyz/docker-netbootxyz</Support>
+  <Project>https://netboot.xyz/</Project>
+  <Overview>netboot.xyz lets you PXE boot various operating system installers or utilities from a single tool over the network. This lets you use one media for many types of operating systems or tools. The iPXE project is used to provide a user friendly menu from within the BIOS that lets you easily choose the operating system you want along with any specific types of versions or bootable flags.&#xD;
+&#xD;
+You can remote attach the ISO to servers, set it up as a rescue option in Grub, or even set up your home network to boot to it by default so that it's always available.&#xD;
+&#xD;
+https://netboot.xyz/&#xD;
+https://github.com/netbootxyz/docker-netbootxyz</Overview>
+  <Category>Network:Management</Category>
+  <WebUI>http://[IP]:[PORT:3000]</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/netbootxyz/netbootxyz.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/netbootxyz/icon/netbootxyz.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1756046806</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="WebUI" Target="3000" Default="3000" Mode="tcp" Description="Web configuration interface." Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+  <Config Name="Port 69 UDP" Target="69" Default="69" Mode="udp" Description="TFTP Port." Type="Port" Display="always" Required="true" Mask="false">69</Config>
+  <Config Name="Port: 80" Target="80" Default="8080" Mode="tcp" Description="NGINX server for hosting assets." Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+  <Config Name="Appdata" Target="/config" Default="/mnt/user/appdata/netbootxyz" Mode="rw" Description="Storage for boot menu files and web application config." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbootxyz/config</Config>
+  <Config Name="Assets" Target="/assets" Default="" Mode="rw" Description="Storage for netboot.xyz bootable assets (live CDs and other files)." Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/netbootxyz/assets</Config>
+  <Config Name="MENU_VERSION" Target="MENU_VERSION" Default="2.0.84" Mode="" Description="Specify a specific version of boot files you want to use from netboot.xyz (unset pulls latest)" Type="Variable" Display="advanced" Required="true" Mask="false">2.0.88</Config>
+  <Config Name="NGINX_PORT" Target="NGINX_PORT" Default="80" Mode="" Description="Specify a different port for NGINX service to listen on." Type="Variable" Display="advanced" Required="true" Mask="false">80</Config>
+  <Config Name="WEB_APP_PORT" Target="WEB_APP_PORT" Default="3000" Mode="" Description="Specify a different port for the web configuration interface to listen on." Type="Variable" Display="advanced" Required="true" Mask="false">3000</Config>
+  <Config Name="PUID" Target="PUID" Default="1000" Mode="" Description="UserID for volume permissions." Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+  <Config Name="PGID" Target="PGID" Default="1000" Mode="" Description="GroupID for volume permissions." Type="Variable" Display="advanced" Required="true" Mask="false">1000</Config>
+</Container>
