@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>electerm-web</Name>
+  <Repository>zxdong262/electerm-web</Repository>
+  <Registry>https://hub.docker.com/r/zxdong262/electerm-web</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/electerm/electerm-web</Support>
+  <Project>https://github.com/electerm/electerm-web</Project>
+  <Overview>Open-sourced terminal/ssh/telnet/serialport/RDP/VNC/sftp/ftp client. This is web app version of electerm app, running in browser, almost has the same features as the desktop version.&#xD;
+&#xD;
+https://github.com/electerm/electerm&#xD;
+https://github.com/electerm/electerm-web&#xD;
+&#xD;
+&#xD;
+sudo chown -R 1001:1001  /mnt/user/appdata/electerm-web/</Overview>
+  <Category>Network:Other</Category>
+  <WebUI>http://[IP]:[PORT:5577]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/electerm-web/electerm-web.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/electerm/icon/electerm.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled>1756026180</DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+  <Config Name="Web UI" Target="5577" Default="5577" Mode="tcp" Description="" Type="Port" Display="always" Required="false" Mask="false">5577</Config>
+  <Config Name="Electerm Data" Target="/home/electerm/data" Default="/mnt/user/appdata/electerm/" Mode="rw" Description="" Type="Path" Display="always" Required="false" Mask="false">/mnt/user/appdata/electerm-web/</Config>
+  <Config Name="DB_PATH" Target="DB_PATH" Default="/home/electerm/data" Mode="" Description="" Type="Variable" Display="always" Required="false" Mask="false">/home/electerm/data</Config>
+  <Config Name="HOST" Target="HOST" Default="0.0.0.0" Mode="" Description="Setting HOST=0.0.0.0 configures the service to listen on all available network interfaces. Default: 0.0.0.0" Type="Variable" Display="always" Required="true" Mask="false">0.0.0.0</Config>
+  <Config Name="SERVER_SECRET" Target="SERVER_SECRET" Default="some_server_secret" Mode="" Description="SERVER_SECRET is used to encrypt data, if not set, would use default value. Should change some_server_secret to some complicated secret string." Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="SERVER_PASS" Target="SERVER_PASS" Default="password_to_login" Mode="" Description="Password to login. Should change password_to_login to some complicated secret string" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+  <Config Name="ENABLE_AUTH" Target="ENABLE_AUTH" Default="1" Mode="" Description="When ENABLE_AUTH enabled, would require login with SERVER_PASS when visit" Type="Variable" Display="always" Required="true" Mask="false">1</Config>
+</Container>
