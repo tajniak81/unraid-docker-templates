@@ -26,7 +26,7 @@ $JWT_SECRET&#13;
 </Overview>
   <Category>Network:Management</Category>
   <WebUI>http://[IP]:[PORT:3552]</WebUI>
-  <TemplateURL/>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/arcane/arcane.xml</TemplateURL>
   <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/arcane/icon/arcane.png</Icon>
   <ExtraParams/>
   <PostArgs/>
