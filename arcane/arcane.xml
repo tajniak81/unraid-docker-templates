@@ -6,7 +6,7 @@
   <Network>bridge</Network>
   <MyIP/>
   <Shell>bash</Shell>
-  <Privileged>true</Privileged>
+  <Privileged>false</Privileged>
   <Support>https://github.com/getarcaneapp/arcane</Support>
   <Project>https://getarcane.app/</Project>
   <Overview>Modern Docker Management, Designed for Everyone.&#13;
