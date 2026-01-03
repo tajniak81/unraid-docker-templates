@@ -11,6 +11,7 @@
   <Project>https://github.com/Dennis960/BackApp</Project>
   <Overview>BackApp is a Go + React application that lets automatically schedule and inspect backups of remote servers via SSH.&#13;
     It is a very lightweight server that runs locally (or on a dedicated machine) and provides a web interface to manage backup profiles.&#13;
+	https://github.com/Dennis960/BackApp&#13;
 
   </Overview>
   <Category>Backup</Category>
