@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<Container version="2">
+  <Name>backapp</Name>
+  <Repository>ghcr.io/dennis960/backapp:latest</Repository>
+  <Registry>https://github.com/dennis960/backapp</Registry>
+  <Network>bridge</Network>
+  <MyIP/>
+  <Shell>sh</Shell>
+  <Privileged>false</Privileged>
+  <Support>https://github.com/Dennis960/BackApp</Support>
+  <Project>https://github.com/Dennis960/BackApp</Project>
+  <Overview>BackApp is a Go + React application that lets automatically schedule and inspect backups of remote servers via SSH.&#13;
+    It is a very lightweight server that runs locally (or on a dedicated machine) and provides a web interface to manage backup profiles.&#13;
+
+  </Overview>
+  <Category>Backup</Category>
+  <WebUI>http://[IP]:[PORT:8080]/</WebUI>
+  <TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/backapp/backapp.xml</TemplateURL>
+  <Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/backapp/icon/backapp.png</Icon>
+  <ExtraParams/>
+  <PostArgs/>
+  <CPUset/>
+  <DateInstalled></DateInstalled>
+  <DonateText/>
+  <DonateLink/>
+  <Requires/>
+
+  <!-- Port mappings -->
+  <Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="BackApp WebUI" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+
+  <!-- Volume / path mappings -->
+  <Config Name="App Data" Target="/data" Default="/mnt/user/appdata/backapp/app-data" Mode="rw" Description="Persistent application data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/backapp/app-data</Config>
+  <Config Name="Backups (App)" Target="/var/backups/app" Default="/mnt/user/appdata/backapp/backups/app" Mode="rw" Description="App backups" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/backapp/backups/app</Config>
+  <Config Name="Backups (Archive)" Target="/var/backups/archive" Default="/mnt/user/appdata/backapp/backups/archive" Mode="rw" Description="Archive backups" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/backapp/backups/archive</Config>
+</Container>
