@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>bulwark</Name>
+	<Repository>ghcr.io/bulwarkmail/webmail:latest</Repository>
+	<Registry>https://github.com/bulwarkmail/webmail</Registry>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://github.com/bulwarkmail/webmail</Support>
+	<Project>https://bulwarkmail.org</Project>
+	<Overview>A modern, self-hosted webmail client for Stalwart Mail Server, built with Next.js and the JMAP protocol.&#xD;
+	JMAP Webmail built for the 21st Century. A modern, self-hosted email client for Stalwart Mail Server powered by the JMAP protocol. Email, calendar, contacts and files. Fast, private, and open source.&#xD;
+	https://bulwarkmail.org &#xD;
+	https://github.com/bulwarkmail/webmail &#xD;</Overview>
+	<Category>Network:Other</Category>
+	<WebUI>http://[IP]:[PORT:3000]/</WebUI>
+	<TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/bulwark/bulwark.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/bulwark/icon/bulwark.png</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled/>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+
+	<Config Name="WebUI Port" Target="3000" Default="3012" Mode="tcp" Description="Bulwark Webmail HTTP port" Type="Port" Display="always" Required="true" Mask="false">3012</Config>
+
+	<Config Name="Settings Data" Target="/app/data/settings" Default="/mnt/user/appdata/bulwark/bulwark-settings" Mode="rw" Description="Persistent encrypted user settings storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bulwark/bulwark-settings</Config>
+	<Config Name="Admin Data" Target="/app/data/admin" Default="/mnt/user/appdata/bulwark/bulwark-admin" Mode="rw" Description="Persistent admin and extension marketplace data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bulwark/bulwark-admin</Config>
+
+	<Config Name="HOSTNAME" Target="HOSTNAME" Default="0.0.0.0" Mode="" Description="Bind address. Use :: for dual-stack IPv6." Type="Variable" Display="advanced" Required="false" Mask="false">0.0.0.0</Config>
+	<Config Name="PORT" Target="PORT" Default="3000" Mode="" Description="Internal listen port for the Bulwark container" Type="Variable" Display="advanced" Required="false" Mask="false">3000</Config>
+	<Config Name="ADMIN_PASSWORD" Target="ADMIN_PASSWORD" Default="" Mode="" Description="Admin password for Bulwark management features" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+	<Config Name="APP_NAME" Target="APP_NAME" Default="Bulwark Webmail" Mode="" Description="Application name shown in the UI" Type="Variable" Display="always" Required="false" Mask="false">Bulwark Webmail</Config>
+	<Config Name="JMAP_SERVER_URL" Target="JMAP_SERVER_URL" Default="" Mode="" Description="URL of the JMAP-compatible mail server" Type="Variable" Display="always" Required="true" Mask="false"></Config>
+	<Config Name="STALWART_FEATURES" Target="STALWART_FEATURES" Default="true" Mode="" Description="Enable Stalwart-specific features such as password changes and sieve filters" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+	<Config Name="SESSION_SECRET" Target="SESSION_SECRET" Default="" Mode="" Description="Secret used to encrypt remembered sessions and synced settings. Generate with: openssl rand -base64 32" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+	<Config Name="SETTINGS_SYNC_ENABLED" Target="SETTINGS_SYNC_ENABLED" Default="true" Mode="" Description="Enable encrypted server-side settings sync" Type="Variable" Display="always" Required="false" Mask="false">true</Config>
+	<Config Name="SETTINGS_DATA_DIR" Target="SETTINGS_DATA_DIR" Default="./data/settings" Mode="" Description="Path inside the container where encrypted settings are stored" Type="Variable" Display="advanced" Required="false" Mask="false">./data/settings</Config>
+	<Config Name="LOGIN_LOGO_LIGHT_URL" Target="LOGIN_LOGO_LIGHT_URL" Default="/branding/Bulwark_Logo_Color.svg" Mode="" Description="Logo displayed on the login page in light mode" Type="Variable" Display="advanced" Required="false" Mask="false">/branding/Bulwark_Logo_Color.svg</Config>
+	<Config Name="LOGIN_LOGO_DARK_URL" Target="LOGIN_LOGO_DARK_URL" Default="/branding/Bulwark_Logo_Color.svg" Mode="" Description="Logo displayed on the login page in dark mode" Type="Variable" Display="advanced" Required="false" Mask="false">/branding/Bulwark_Logo_Color.svg</Config>
+	<Config Name="LOGIN_COMPANY_NAME" Target="LOGIN_COMPANY_NAME" Default="Bulwark Webmail" Mode="" Description="Company or organization name shown on the login page" Type="Variable" Display="advanced" Required="false" Mask="false">Bulwark Webmail</Config>
+	<Config Name="LOGIN_WEBSITE_URL" Target="LOGIN_WEBSITE_URL" Default="https://bulwarkmail.org" Mode="" Description="Website link shown on the login page" Type="Variable" Display="advanced" Required="false" Mask="false">https://bulwarkmail.org</Config>
+	<Config Name="EXTENSION_DIRECTORY_URL" Target="EXTENSION_DIRECTORY_URL" Default="https://extensions.bulwarkmail.org" Mode="" Description="Bulwark extension marketplace URL" Type="Variable" Display="advanced" Required="false" Mask="false">https://extensions.bulwarkmail.org</Config>
+</Container>
