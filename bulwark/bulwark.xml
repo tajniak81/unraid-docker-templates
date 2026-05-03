@@ -25,7 +25,7 @@
 	<DonateLink/>
 	<Requires/>
 
-	<Config Name="WebUI Port" Target="3000" Default="3012" Mode="tcp" Description="Bulwark Webmail HTTP port" Type="Port" Display="always" Required="true" Mask="false">3012</Config>
+	<Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Bulwark Webmail HTTP port" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
 
 	<Config Name="Settings Data" Target="/app/data/settings" Default="/mnt/user/appdata/bulwark/bulwark-settings" Mode="rw" Description="Persistent encrypted user settings storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bulwark/bulwark-settings</Config>
 	<Config Name="Admin Data" Target="/app/data/admin" Default="/mnt/user/appdata/bulwark/bulwark-admin" Mode="rw" Description="Persistent admin and extension marketplace data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/bulwark/bulwark-admin</Config>
