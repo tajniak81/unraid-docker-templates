@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>VolumeVault</Name>
+	<Repository>ghcr.io/darkdragon14/volumevault:latest</Repository>
+	<Registry>https://github.com/users/Darkdragon14/packages/container/package/volumevault</Registry>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://github.com/Darkdragon14/VolumeVault/issues</Support>
+	<Project>https://github.com/Darkdragon14/VolumeVault</Project>
+	<Overview>VolumeVault is a self-hosted application for managing Docker volume and host path backups with safe restores powered by offen/docker-volume-backup.&#xD;
+&#xD;
+This template mirrors the attached compose file and keeps the same bind mounts, port mapping, and environment values.&#xD;
+&#xD;
+Generate an APP_KEY with: docker run --rm ghcr.io/darkdragon14/volumevault:latest php artisan key:generate --show&#xD;
+&#xD;
+Open the web UI after startup and complete the onboarding flow to create the first administrator account.&#xD;
+&#xD;
+https://volumevault.darkdragon14.dev/&#xD;
+&#xD;
+https://github.com/Darkdragon14/VolumeVault</Overview>
+	<Category>Backup</Category>
+	<WebUI>http://[IP]:[PORT:8080]</WebUI>
+	<TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/volumevault/volumevault.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/volumevault/icon/volumevault.png</Icon>
+	<ExtraParams/>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled/>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+	<Config Name="WebUI Port" Target="8080" Default="8080" Mode="tcp" Description="VolumeVault web interface" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
+	<Config Name="Storage" Target="/app/storage" Default="/mnt/user/appdata/volumevault/data" Mode="rw" Description="Persistent VolumeVault storage" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/volumevault/data</Config>
+	<Config Name="Docker Socket" Target="/var/run/docker.sock" Default="/var/run/docker.sock" Mode="rw" Description="Docker socket used to discover volumes and run backup tasks" Type="Path" Display="always" Required="true" Mask="false">/var/run/docker.sock</Config>
+	<Config Name="APP_KEY" Target="APP_KEY" Default="" Mode="" Description="Application encryption key. Generate this before first start and keep it safe. Generate an APP_KEY with: docker run --rm ghcr.io/darkdragon14/volumevault:latest php artisan key:generate --show" Type="Variable" Display="always" Required="true" Mask="true"></Config>
+	<Config Name="APP_TIMEZONE" Target="APP_TIMEZONE" Default="UTC" Mode="" Description="Application timezone" Type="Variable" Display="always" Required="false" Mask="false"></Config>
+	<TailscaleStateDir/>
+</Container>
