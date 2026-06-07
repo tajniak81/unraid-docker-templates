@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<Container version="2">
+	<Name>Rackpad</Name>
+	<Repository>ghcr.io/kobii-git/rackpad:latest</Repository>
+	<Registry>https://github.com/users/Kobii-git/packages/container/package/rackpad</Registry>
+	<Network>bridge</Network>
+	<MyIP/>
+	<Shell>sh</Shell>
+	<Privileged>false</Privileged>
+	<Support>https://github.com/Kobii-git/rackpad/issues</Support>
+	<Project>https://github.com/Kobii-git/rackpad</Project>
+	<Overview>Rackpad is a self-hosted infrastructure inventory and operations workspace for homelabs, small racks, network rooms, and lab environments. It brings racks, devices, ports, cables, VLANs, IPAM, WiFi, compute, discovery, monitoring, docs, images, labs, and an admin area into one clean app.&#xD;
+&#xD;
+On first start, open the web UI and create the initial administrator account.&#xD;
+&#xD;
+https://github.com/Kobii-git/rackpad&#xD;
+&#xD;
+https://rackpad.co.za/</Overview>
+	<Category>Network:Management</Category>
+	<WebUI>http://[IP]:[PORT:3000]</WebUI>
+	<TemplateURL>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/rackpad/rackpad.xml</TemplateURL>
+	<Icon>https://raw.githubusercontent.com/tajniak81/unraid-docker-templates/refs/heads/main/rackpad/icon/rackpad.png</Icon>
+	<ExtraParams>--init --read-only --tmpfs /tmp --security-opt no-new-privileges:true</ExtraParams>
+	<PostArgs/>
+	<CPUset/>
+	<DateInstalled/>
+	<DonateText/>
+	<DonateLink/>
+	<Requires/>
+	<Config Name="WebUI Port" Target="3000" Default="3000" Mode="tcp" Description="Rackpad web interface" Type="Port" Display="always" Required="true" Mask="false">3000</Config>
+	<Config Name="AppData" Target="/data" Default="/mnt/user/appdata/rackpad/data" Mode="rw" Description="Persistent Rackpad SQLite database and uploaded content" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/rackpad/data</Config>
+	<Config Name="NODE_ENV" Target="NODE_ENV" Default="production" Mode="" Description="Application environment" Type="Variable" Display="advanced" Required="true" Mask="false">production</Config>
+	<Config Name="HOST" Target="HOST" Default="0.0.0.0" Mode="" Description="Bind address inside the container" Type="Variable" Display="advanced" Required="true" Mask="false">0.0.0.0</Config>
+	<Config Name="PORT" Target="PORT" Default="3000" Mode="" Description="Internal Rackpad port" Type="Variable" Display="advanced" Required="true" Mask="false">3000</Config>
+	<Config Name="DATABASE_PATH" Target="DATABASE_PATH" Default="/data/rackpad.db" Mode="" Description="SQLite database path inside the container" Type="Variable" Display="advanced" Required="true" Mask="false">/data/rackpad.db</Config>
+	<Config Name="MONITOR_INTERVAL_MS" Target="MONITOR_INTERVAL_MS" Default="300000" Mode="" Description="Background health-check loop interval in milliseconds" Type="Variable" Display="always" Required="false" Mask="false">300000</Config>
+	<Config Name="TRUST_PROXY" Target="TRUST_PROXY" Default="0" Mode="" Description="Set to 1 when Rackpad is behind a reverse proxy" Type="Variable" Display="always" Required="false" Mask="false">0</Config>
+	<Config Name="TRUSTED_HOSTS" Target="TRUSTED_HOSTS" Default="" Mode="" Description="Optional comma-separated public hostnames Rackpad should trust" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="TRUSTED_ORIGINS" Target="TRUSTED_ORIGINS" Default="" Mode="" Description="Optional comma-separated public origins Rackpad should trust" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="APP_URL" Target="APP_URL" Default="" Mode="" Description="Public Rackpad URL, required for OIDC and recommended behind a reverse proxy" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_ENABLED" Target="OIDC_ENABLED" Default="0" Mode="" Description="Set to 1 to enable OIDC sign-in" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+	<Config Name="OIDC_ISSUER_URL" Target="OIDC_ISSUER_URL" Default="" Mode="" Description="OIDC issuer URL" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_CLIENT_ID" Target="OIDC_CLIENT_ID" Default="" Mode="" Description="OIDC client ID" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_CLIENT_SECRET" Target="OIDC_CLIENT_SECRET" Default="" Mode="" Description="OIDC client secret" Type="Variable" Display="advanced" Required="false" Mask="true"></Config>
+	<Config Name="OIDC_REDIRECT_URI" Target="OIDC_REDIRECT_URI" Default="" Mode="" Description="Optional explicit OIDC callback URL" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_LABEL" Target="OIDC_LABEL" Default="OIDC" Mode="" Description="Label shown on the OIDC sign-in button" Type="Variable" Display="advanced" Required="false" Mask="false">OIDC</Config>
+	<Config Name="OIDC_DEFAULT_ROLE" Target="OIDC_DEFAULT_ROLE" Default="viewer" Mode="" Description="Default role for new OIDC users" Type="Variable" Display="advanced" Required="false" Mask="false">viewer</Config>
+	<Config Name="OIDC_DEBUG" Target="OIDC_DEBUG" Default="0" Mode="" Description="Set to 1 temporarily to log OIDC troubleshooting details" Type="Variable" Display="advanced" Required="false" Mask="false">0</Config>
+	<Config Name="OIDC_ADMIN_USERS" Target="OIDC_ADMIN_USERS" Default="" Mode="" Description="Optional comma-separated usernames that should get the admin role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_EDITOR_USERS" Target="OIDC_EDITOR_USERS" Default="" Mode="" Description="Optional comma-separated usernames that should get the editor role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_VIEWER_USERS" Target="OIDC_VIEWER_USERS" Default="" Mode="" Description="Optional comma-separated usernames that should get the viewer role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_ADMIN_GROUPS" Target="OIDC_ADMIN_GROUPS" Default="" Mode="" Description="Optional comma-separated group names that should get the admin role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_EDITOR_GROUPS" Target="OIDC_EDITOR_GROUPS" Default="" Mode="" Description="Optional comma-separated group names that should get the editor role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OIDC_VIEWER_GROUPS" Target="OIDC_VIEWER_GROUPS" Default="" Mode="" Description="Optional comma-separated group names that should get the viewer role" Type="Variable" Display="advanced" Required="false" Mask="false"></Config>
+	<Config Name="OUI_AUTO_UPDATE" Target="OUI_AUTO_UPDATE" Default="1" Mode="" Description="Set to 0 to disable MAC vendor OUI auto updates" Type="Variable" Display="advanced" Required="false" Mask="false">1</Config>
+	<Config Name="DISCOVERY_MAC_SCAN_MODE" Target="DISCOVERY_MAC_SCAN_MODE" Default="auto" Mode="" Description="MAC discovery mode: auto, neighbor, arp-scan, nmap, or off" Type="Variable" Display="advanced" Required="false" Mask="false">auto</Config>
+	<TailscaleStateDir/>
+</Container>
