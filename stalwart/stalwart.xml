@@ -26,7 +26,8 @@ $ docker logs stalwart</Overview>
   <DonateText/>
   <DonateLink/>
   <Requires/>
-  <Config Name="Stalwart data" Target="/opt/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart</Config>
+  <Config Name="Stalwart data" Target="/var/lib/stalwart" Default="" Mode="rw" Description="Stalwart data" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart/data</Config>
+  <Config Name="Stalwart etd" Target="/etc/stalwart" Default="" Mode="rw" Description="Stalwart etc" Type="Path" Display="always" Required="true" Mask="false">/mnt/user/appdata/stalwart/etc</Config>  
   <Config Name="Port 443" Target="443" Default="" Mode="tcp" Description="Port 443" Type="Port" Display="always" Required="true" Mask="false">44301</Config>
   <Config Name="Port 8080" Target="8080" Default="8080" Mode="tcp" Description="Port 8080" Type="Port" Display="always" Required="true" Mask="false">8080</Config>
   <Config Name="Port 25" Target="25" Default="25" Mode="tcp" Description="Port 25" Type="Port" Display="always" Required="true" Mask="false">25</Config>
